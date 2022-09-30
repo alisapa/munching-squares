@@ -26,7 +26,7 @@ const char *help_str =
 "  -o, --op\tOperation that is performed. One of: AND, OR, XOR\n"
 "  -P, --paused\tPause at the beginning (un-pause with space)\n"
 "  -s, --size\tSize of the window, <width>x<height>\n"
-"  -t\t\tStarting value for T\n"
+"  -t, --tstart\tStarting value for T\n"
 "  -T, --tstep\tHow much to increment T in each step\n"
 "  -h, --help\tShows this message and exits.\n"
 "\n"
@@ -107,6 +107,7 @@ int main(int argc, char **argv) {
     {"op",     required_argument, NULL, 'o'},
     {"paused", no_argument,       NULL, 'P'},
     {"size",   required_argument, NULL, 's'},
+    {"tstart", required_argument, NULL, 't'},
     {"tstep",  required_argument, NULL, 'T'},
     {0,        0,                 NULL,  0 }
   };

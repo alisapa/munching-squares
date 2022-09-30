@@ -4,7 +4,7 @@ This program draws the "munching squares" animation, which is a plot of Y = X XO
 
 ## Options
 
-There are several options for producing different animations. See the the manpage `munch(6)` for a full documentation; it can be read without installation by invoking `man man/munch.6`.
+There are several options for producing different animations. See `man munch(6)` for a full documentation; it can be read without installation by invoking `man man/munch.6`.
 
 Invoke `munch --help` for a short summary of options.
 ```
@@ -18,7 +18,7 @@ Draws the "Munching Squares" animation.
   -o, --op	Operation that is performed. One of: AND, OR, XOR
   -P, --paused	Paused at the beginning, un-pause with space
   -s, --size	Size of the window, <width>x<height>
-  -t		Starting value for T
+  -t, --tstart	Starting value for T
   -T, --tstep	How much to increment T in each step
   -h, --help	Shows this message and exits.
 
