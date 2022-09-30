@@ -15,10 +15,10 @@ Draws the "Munching Squares" animation.
   -d, --delay	Delay in ms before drawing each frame
   -f, --fade	How much to subtract from old values in FADE mode
   -m, --mode	Drawing mode. One of: ZERO, FADE, NOFADE
-  -o, --op	    Operation that is performed. One of: AND, OR, XOR
+  -o, --op	Operation that is performed. One of: AND, OR, XOR
   -P, --paused	Paused at the beginning, un-pause with space
   -s, --size	Size of the window, <width>x<height>
-  -t		    Starting value for T
+  -t		Starting value for T
   -T, --tstep	How much to increment T in each step
   -h, --help	Shows this message and exits.
 
@@ -26,6 +26,9 @@ See also: man munch(6)
 ```
 
 ## Installation
+
+Dependencies:
+- [SDL2](https://www.libsdl.org)
 
 Compiling:
 ```bash
