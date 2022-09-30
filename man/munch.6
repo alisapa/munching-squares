@@ -1,0 +1,78 @@
+.TH MUNCH 6 "30 September 2022"
+.\" Please adjust this date whenever revising the manpage.
+.SH NAME
+munch \- an SDL implementation of Munching Squares
+
+.SH SYNOPSIS
+.B munch
+.RI [ options ]
+
+.SH DESCRIPTION
+.B munch
+draws the so-called "Munching Squares", which are a plot of the graph
+Y = X XOR T
+for consecutive values of T.
+
+.SH OPTIONS
+
+.TP
+\fB\-d\fP \fI<uint>\fP, \fB\-\-delay=\fI<uint>\fP
+Delay in milliseconds before drawing each frame; default is 30.
+.TP
+\fB\-f\fP \fI<uint>\fP, \fB\-\-fade=\fI<uint>\fP
+How much to subtract from the old values during each step; default is 5.
+.br
+This option only makes sense in the FADE mode. Note that for true fading, the value must be a divisor of 255, otherwise unsigned overflow will occur. This behaviour is kept intentionally due to the intriguing visual effects it can produce.
+.TP
+\fB\-m\fP \fI<mode>\fP, \fB\-\-mode=\fI<mode>\fP
+One of the three drawing modes; default is FADE.
+.br
+ZERO: Erase the screen before drawing each frame, so that only the pattern for the current step is displayed.
+.br
+FADE: Subtract a fixed value from every pixel before drawing, so that the old pixels gradually fade.
+.br
+NOFADE: Do not erase or fade the old values, so that they stay on the screen unchanged.
+.TP
+\fB\-o\fP \fI<op>\fP, \fB\-\-op=\fI<op>\fP
+Sets the operation in the calculation Y = X OP Y. Default is XOR.
+.br
+AND: X & Y
+.br
+OR: X | Y
+.br
+XOR: X ^ Y
+.br
+The results produced by AND and OR are called "munching triangles" instead of "munching squares".
+.TP
+\fB\-P\fP, \fB\-\-paused\fP
+Starts the program in a paused mode. Un-pause using spacebar, see also \fBCONTROLS\fP.
+.TP
+\fB\-s\fP \fI<width>x<height>\fP, \fB\-\-size=\fI<width>x<height>\fP
+Sets the size of the window that is created and drawn to. Note that the window cannot be resized.
+.TP
+\fB\-t\fP \fI<uint>\fP
+Starting value for T.
+.TP
+\fB\-T\fP \fI<uint>\fP, \fB--tstep=\fI<uint>\fP
+How much to increment T in each step.
+.TP
+.B \-h, \-\-help
+Shows options summary.
+
+.SH CONTROLS
+.TP
+\fBSPACE\fP
+Toggle pause/unpause. Pausing works by swapping \fItstep\fP with 0, so the frame still gets re-drawn while paused, wasting CPU cycles, but it doesn't get updated. Not sure whether this is better or worse than checking for pausedness before drawing any frame.
+.TP
+\fBESC\fP, \fBq\fP
+Quit the program.
+
+.SH SEE ALSO
+First mention and description of Munching Squares, from the HAKMEM document:
+.br
+http://www.inwap.com/pdp10/hbaker/hakmem/hacks.html#item146
+.br
+.br
+Demonstration of Munching Squares on a phosphorus screen, producing a more elaborate fading effect than this program:
+.br
+https://www.youtube.com/watch?v=V4oRHv-Svwc
