@@ -55,5 +55,5 @@ make uninstall
 Note that if `INSTALL_PREFIX` set during installation, it must be also be set, to the same value, during removal.
 
 ## See also
-- [DEC PDP-7 w/ Type 340 display running Munching Squares and Spirograph](https://www.youtube.com/watch?v=V4oRHv-Svwc) --- its phosphor screen produces a more elaborate fading effect than this program
-- [http://www.inwap.com/pdp10/hbaker/hakmem/hacks.html#item146](First mention and description of Munching Squares, from the HAKMEM document)
+- [DEC PDP-7 w/ Type 340 display running Munching Squares and Spirograph](https://www.youtube.com/watch?v=V4oRHv-Svwc) - its phosphor screen produces a more elaborate fading effect than this program
+- [First mention and description of Munching Squares, from the HAKMEM document](http://www.inwap.com/pdp10/hbaker/hakmem/hacks.html#item146)
