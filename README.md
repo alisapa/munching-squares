@@ -8,7 +8,7 @@ There are several options for producing different animations. See `man munch(6)`
 
 Invoke `munch --help` for a short summary of options.
 ```
-Usage: ./munch [OPTIONS]
+Usage: munch [OPTIONS]
 
 Draws the "Munching Squares" animation.
 
