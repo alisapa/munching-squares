@@ -239,6 +239,16 @@ int main(int argc, char **argv) {
           cont = 0;
         } else if (event.key.keysym.sym == SDLK_SPACE) {
           swap(&tstep, &paused);
+        } else if (event.key.keysym.sym == SDLK_LEFT) {
+          if (!paused)
+            tstep--;
+          else
+            paused--;
+        } else if (event.key.keysym.sym == SDLK_RIGHT) {
+          if (!paused)
+            tstep++;
+          else
+            paused++;
         }
         break;
       default:
