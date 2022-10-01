@@ -62,9 +62,14 @@ Shows options summary.
 .SH CONTROLS
 .TP
 \fBSPACE\fP
-Toggle pause/unpause. Pausing works by swapping \fItstep\fP with 0, so the frame still gets re-drawn while paused, wasting CPU cycles, but it doesn't get updated. Not sure whether this is better or worse than checking for pausedness before drawing any frame.
+Toggle pause/unpause. Pausing works by swapping \fItstep\fP with 0, so the frame still gets re-drawn while paused, wasting CPU cycles, but it doesn't get updated. In FADE mode, this results in the screen fading out after pausing, until only the currently active points are shown.
 .br
 Changing \fItstep\fP during a pause will not un-pause, it will change the swapped-out value.
+.TP
+\fBENTER\fP
+Toggle freeze. Freeze waits in an SDL_delay loop until the ENTER key is pressed again. No frames are drawn nor calculated.
+.br
+Note that this means no other keys will work while frozen. Freeze must be untoggled before the other keys can be processed.
 .TP
 \fBESC\fP, \fBq\fP
 Quit the program.
